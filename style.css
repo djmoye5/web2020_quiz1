@@ -1,0 +1,115 @@
+body{
+    background: linear-gradient(lightblue, skyblue);
+}
+.main{
+    background-image: url("grass.png");
+    width: 100%;
+    height: 1020px;
+    background-repeat: no-repeat;
+    background-size: 1500px 740px;
+}
+
+.sun{
+    position: relative;
+    background: radial-gradient(gold, yellow);
+    border-radius: 50%;
+    position: absolute;
+    top: -148px;
+    left: 500px;
+    width: 249px;
+    height: 253px;
+    animation-name: glow-sun;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.cloud1{
+    position: relative;
+    top: -27px;
+    right: -799px;
+    width: 200px;
+    height: 160px;
+    animation-name: glow-clouds;
+    animation-duration: 5s;
+    animation-name: move-cloud1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation: move-cloud1 20s linear 1000ms infinite;
+}
+
+.cloud2{
+    position: relative;
+    top: -45px;
+    right: -1149px;
+    width: 150px;
+    height: 100px;
+    animation-name: glow-clouds;
+    animation-duration: 5s;
+    animation-name: move-cloud2;
+    animation-iteration-count: infinite;
+    animation: move-cloud2 7s linear 800ms infinite;
+}
+
+.cloud3{
+    position: relative;
+    top: -27px;
+    right: 234px;
+    width: 200px;
+    height: 140px;
+    animation-name: glow-clouds;
+    animation-duration: 5s;
+    animation-name: move-cloud3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation: move-cloud3 15s linear 700ms infinite;
+}
+
+@keyframes glow-sun {
+    0%{background-color: radial-gradient(yellow, gold);}
+    25%{background-color: radial-gradient(gold, orange);}
+    50%{background-color: radial-gradient(orange, gold);}
+    100%{background-color: radial-gradient(orange, gold);}
+}
+
+@keyframes glow-clouds {
+    0%{background-color: linear-gradient(white, lightblue);}
+    25%{background-color: linear-gradient(lightblue, skyblue);}
+    50%{background-color: linear-gradient(skyblue, lightblue);}
+    100%{background-color: linear-gradient(lightblue, white);}
+}
+
+@keyframes move-cloud1 {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(600px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes move-cloud2 {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(-600px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes move-cloud3 {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(600px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
